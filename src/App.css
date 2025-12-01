@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; /* allow scrolling vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* landing page info */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: rgb(245, 245, 245);
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 40vh;
+  letter-spacing: 0.4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  margin: 0;
+  margin-bottom: 1vh;
+}
+
+.description {
+  font-size: clamp(0.8rem, 1.5vw, 1.5rem);
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(215, 94, 156);
+  background: transparent;
+  border: 2px solid rgb(215, 94, 156); 
+  width: 15vw;
+  padding: 0.5rem;
+  margin-top: 4vh;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1.2s ease forwards; /* animation runs once */
+  animation-delay: 0.5s; /* optional delay */
+}
+
+.description:hover {
+  transform: scale(1.5);
+  background-color: #070c33;
+  border: none;
+  color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cover {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.navbar {
+  position: sticky; /* <-- Makes it stick at top once it reaches it */
+  top: 0;
+  background: white;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Regular sections underneath */
+.sections {
+  min-height: 80vh;
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.footer {
+  background: #070c33;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  margin-left: -3rem;
+  height: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
